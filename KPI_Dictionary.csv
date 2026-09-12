@@ -1,0 +1,9 @@
+KPI Name,Formula,Business Meaning,Data Source
+Total Orders,Count of unique order_id,Shows the total number of unique orders,order_id
+Total Quantity,Sum of quantity,Shows the total number of products/services ordered,quantity
+Total Sales,quantity × unit_price × (1 - discount_pct/100),Shows the total revenue generated after discount,"quantity, unit_price, discount_pct"
+Average Order Value,Total Sales ÷ Total Orders,Shows the average revenue generated per order,Total Sales and Total Orders
+Average Unit Price,Average of unit_price,Shows the average selling price,unit_price
+Average Discount,Average of discount_pct,Shows the average discount given to customers,discount_pct
+Paid Orders,Count of orders where payment_status = Paid,Shows how many orders have been paid,payment_status
+Pending Orders,Count of orders where payment_status = Pending,Shows how many orders are still pending,payment_status

@@ -1,0 +1,9 @@
+Data Quality Dimension,Field,Business Rule,Failure Threshold,Action If Failed,Escalation Owner
+Uniqueness,order_id,Order ID must be unique.,0 duplicates allowed,Remove duplicate record after investigation.,Data Analyst
+Completeness,order_id,Order ID must not be missing.,0 missing values allowed,Investigate source data and correct the missing ID.,Data Analyst
+Validity,quantity,Quantity must be a positive whole number.,0 invalid values allowed,Convert invalid values to missing and investigate.,Data Analyst
+Validity,discount_pct,Discount must be between 0 and 100.,0 invalid values allowed,Convert invalid values to missing and investigate.,Data Analyst
+Validity,order_date,Order date must be a valid date.,0 invalid/missing dates allowed,Correct date format or investigate missing date.,Data Analyst
+Consistency,customer_segment,"Customer segment must be Student, Fresher, or Professional.",0 invalid categories allowed,Normalize category values.,Data Analyst
+Consistency,payment_status,"Payment status must be Paid, Pending, Failed, or Refunded.",0 invalid statuses allowed,Normalize status values.,Finance Team
+CompletenessFreshness,cityorder_date,City must not be missing.Latest order date should be within 30 days of analysis date.,0 missing values allowedMore than 30 days old,Investigate source data and correct missing city.Review/update source data.,Operations TeamRetail/Sales Manager

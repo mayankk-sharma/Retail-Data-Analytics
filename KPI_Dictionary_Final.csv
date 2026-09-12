@@ -1,0 +1,9 @@
+KPI Name,Formula,Grain,Filters,Owner,Refresh Cadence,Business Meaning
+Total Orders,COUNT(DISTINCT order_id),Order,All valid orders,Sales Manager,Daily,Total number of unique orders
+Total Quantity,SUM(quantity),Order,Valid quantity values,Sales Manager,Daily,Total quantity ordered
+Total Sales,quantity × unit_price × (1 - discount_pct / 100),Order,Valid quantity and price values,Sales Manager,Daily,Revenue generated after discount
+Average Order Value,Total Sales / Total Orders,Order,Valid orders,Sales Manager,Daily,Average revenue generated per order
+Average Unit Price,AVG(unit_price),Order,Valid unit prices,Sales Manager,Daily,Average price of products/services
+Average Discount,AVG(discount_pct),Order,Valid discount values,Sales Manager,Daily,Average discount given to customers
+Paid Orders,COUNT(payment_status = Paid),Order,Payment status = Paid,Finance Team,Daily,Number of successfully paid orders
+Pending Orders,COUNT(payment_status = Pending),Order,Payment status = Pending,Finance Team,Daily,Number of orders with pending payment
